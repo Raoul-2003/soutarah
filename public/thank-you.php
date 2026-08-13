@@ -14,7 +14,7 @@ require_once '../includes/header.php';
 <style>
     .bg-thank-you {
         background-color: #0b1711;
-        background-image: url('/soutarah/public/assets/img/car.png');
+        background-image: url('/public/assets/img/car.png');
         background-size: cover;
         background-position: center;
         background-attachment: fixed;
@@ -128,3 +128,4 @@ require_once '../includes/header.php';
 </script>
 
 <?php require_once '../includes/footer.php'; ?>
+

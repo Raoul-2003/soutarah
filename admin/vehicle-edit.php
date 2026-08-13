@@ -8,20 +8,20 @@ requireAdmin();
 
 $id = $_GET['id'] ?? null;
 if (!$id) {
-    redirect('/soutarah/admin/vehicles.php');
+    redirect('/admin/vehicles.php');
 }
 
 $vehicle = getVehicleById($pdo, $id);
 if (!$vehicle) {
     flash('error', 'Véhicule introuvable.', 'error');
-    redirect('/soutarah/admin/vehicles.php');
+    redirect('/admin/vehicles.php');
 }
 
 if (isPost()) {
     $token = $_POST['csrf_token'] ?? '';
     if (!verifyCsrfToken($token)) {
         flash('error', 'Erreur de sécurité CSRF.', 'error');
-        redirect('/soutarah/admin/vehicle-edit.php?id=' . urlencode($id));
+        redirect('/admin/vehicle-edit.php?id=' . urlencode($id));
     }
 
     $code = trim($_POST['code'] ?? '');
@@ -49,7 +49,7 @@ if (isPost()) {
                 $stmt->execute([$code, $brand, $model, $registration, $status, $id]);
                 
                 flash('success', 'Véhicule mis à jour avec succès.');
-                redirect('/soutarah/admin/vehicles.php');
+                redirect('/admin/vehicles.php');
             }
         } catch (PDOException $e) {
             flash('error', 'Erreur de base de données : ' . $e->getMessage(), 'error');
@@ -74,7 +74,7 @@ require_once '../includes/header.php';
             <h1 class="text-4xl md:text-5xl font-black tracking-tight uppercase leading-none bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-400 mb-2">Modifier le véhicule</h1>
             <p class="text-white/60 font-body-lg">Mise à jour des informations du véhicule <?= e($vehicle['code']) ?></p>
         </div>
-        <a href="/soutarah/admin/vehicles.php" class="mt-4 md:mt-0 bg-white/5 text-white/70 border border-white/10 px-6 py-3 rounded-xl font-bold hover:bg-white/20 hover:text-white transition-colors flex items-center gap-2 backdrop-blur-md">
+        <a href="/admin/vehicles.php" class="mt-4 md:mt-0 bg-white/5 text-white/70 border border-white/10 px-6 py-3 rounded-xl font-bold hover:bg-white/20 hover:text-white transition-colors flex items-center gap-2 backdrop-blur-md">
             <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">arrow_back</span>
             Retour à la liste
         </a>
@@ -83,7 +83,7 @@ require_once '../includes/header.php';
     <div class="bg-white/5 border border-white/10 backdrop-blur-xl rounded-[24px] p-6 md:p-8 shadow-sm fade-in-up delay-100">
         <?= getFlash('error') ?>
         
-        <form action="/soutarah/admin/vehicle-edit.php?id=<?= e($id) ?>" method="POST" class="space-y-6">
+        <form action="/admin/vehicle-edit.php?id=<?= e($id) ?>" method="POST" class="space-y-6">
             <input type="hidden" name="csrf_token" value="<?= e(csrfToken()) ?>">
             
             <div class="flex flex-col gap-2">
@@ -134,3 +134,4 @@ require_once '../includes/header.php';
 </main>
 
 <?php require_once '../includes/footer.php'; ?>
+

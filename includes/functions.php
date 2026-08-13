@@ -90,3 +90,4 @@ function getVehicleById($pdo, $id) {
     $stmt->execute([$id]);
     return $stmt->fetch();
 }
+

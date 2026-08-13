@@ -5,7 +5,7 @@ require_once '../includes/functions.php';
 require_once '../includes/auth.php';
 
 if (isAdminLoggedIn()) {
-    redirect('/soutarah/admin/dashboard.php');
+    redirect('/admin/dashboard.php');
 }
 
 $bodyClass = 'bg-luxury-car text-on-background min-h-screen flex items-center justify-center p-margin-mobile relative overflow-hidden';
@@ -16,7 +16,7 @@ require_once '../includes/header.php';
 <style>
     .bg-luxury-car {
         background-color: #0B2117;
-        background-image: url('/soutarah/public/assets/img/car.png');
+        background-image: url('/public/assets/img/car.png');
         background-size: cover;
         background-position: center;
         background-attachment: fixed;
@@ -36,7 +36,7 @@ require_once '../includes/header.php';
         <header class="text-center flex flex-col gap-stack-xs items-center">
             <!-- Logo Image -->
             <div class="w-32 h-32 mb-2 flex items-center justify-center">
-                <img src="/soutarah/assets/images/logo.png" alt="SOUTARAH Logo" class="w-full h-full object-contain drop-shadow-md">
+                <img src="/assets/images/logo.png" alt="SOUTARAH Logo" class="w-full h-full object-contain drop-shadow-md">
             </div>
             <h1 class="font-headline-lg text-headline-lg md:font-display-lg-mobile md:text-display-lg-mobile text-white tracking-tight">
                 SOUTARAH
@@ -49,7 +49,7 @@ require_once '../includes/header.php';
         <?= getFlash('error') ?>
         
         <!-- Form Section -->
-        <form action="/soutarah/admin/authenticate.php" method="POST" class="flex flex-col gap-stack-md mt-stack-xs">
+        <form action="/admin/authenticate.php" method="POST" class="flex flex-col gap-stack-md mt-stack-xs">
             <input type="hidden" name="csrf_token" value="<?= e(csrfToken()) ?>">
             
             <!-- Input Group: Email -->
@@ -102,3 +102,4 @@ require_once '../includes/header.php';
 </main>
 
 <?php require_once '../includes/footer.php'; ?>
+

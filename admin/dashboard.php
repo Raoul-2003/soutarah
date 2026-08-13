@@ -96,7 +96,7 @@ require_once '../includes/header.php';
             <h1 class="text-4xl md:text-5xl font-black tracking-tight uppercase leading-none bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-400 mb-2">Tableau de bord</h1>
             <p class="text-white/60 font-body-lg">Vue d'ensemble de la flotte et de la satisfaction client</p>
         </div>
-        <a href="/soutarah/admin/statistics.php" class="mt-4 md:mt-0 bg-white/10 hover:bg-white/20 border border-white/20 backdrop-blur-md text-white px-6 py-3 rounded-xl font-bold transition-all flex items-center gap-2 group hover:shadow-[0_0_20px_rgba(57,255,20,0.2)]">
+        <a href="/admin/statistics.php" class="mt-4 md:mt-0 bg-white/10 hover:bg-white/20 border border-white/20 backdrop-blur-md text-white px-6 py-3 rounded-xl font-bold transition-all flex items-center gap-2 group hover:shadow-[0_0_20px_rgba(57,255,20,0.2)]">
             <span class="material-symbols-outlined text-[#39ff14] group-hover:scale-110 transition-transform" style="font-variation-settings: 'FILL' 1;">analytics</span>
             Toutes les stats
         </a>
@@ -237,7 +237,7 @@ require_once '../includes/header.php';
                 <span class="material-symbols-outlined text-blue-400">forum</span>
                 Derniers avis reçus
             </h2>
-            <a href="/soutarah/admin/responses.php" class="text-white/60 hover:text-white text-sm font-medium hover:underline transition-colors flex items-center gap-1">
+            <a href="/admin/responses.php" class="text-white/60 hover:text-white text-sm font-medium hover:underline transition-colors flex items-center gap-1">
                 Voir tout <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
             </a>
         </div>
@@ -271,7 +271,7 @@ require_once '../includes/header.php';
                                     <span class="font-bold inline-block border px-3 py-1 rounded-lg <?= $color ?>"><?= e($r) ?>/5</span>
                                 </td>
                                 <td class="p-5 text-right">
-                                    <a href="/soutarah/admin/response-view.php?id=<?= e($response['id']) ?>" class="inline-flex items-center justify-center bg-white/5 text-white/70 hover:bg-white/20 hover:text-white rounded-xl p-2 transition-colors border border-white/10 group-hover:border-white/30">
+                                    <a href="/admin/response-view.php?id=<?= e($response['id']) ?>" class="inline-flex items-center justify-center bg-white/5 text-white/70 hover:bg-white/20 hover:text-white rounded-xl p-2 transition-colors border border-white/10 group-hover:border-white/30">
                                         <span class="material-symbols-outlined text-[20px]">visibility</span>
                                     </a>
                                 </td>
@@ -374,3 +374,4 @@ document.addEventListener("DOMContentLoaded", function() {
 </script>
 
 <?php require_once '../includes/footer.php'; ?>
+

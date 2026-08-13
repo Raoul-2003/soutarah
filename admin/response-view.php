@@ -8,7 +8,7 @@ requireAdmin();
 
 $id = $_GET['id'] ?? null;
 if (!$id) {
-    redirect('/soutarah/admin/responses.php');
+    redirect('/admin/responses.php');
 }
 
 try {
@@ -23,7 +23,7 @@ try {
 
     if (!$response) {
         flash('error', 'Réponse introuvable.', 'error');
-        redirect('/soutarah/admin/responses.php');
+        redirect('/admin/responses.php');
     }
 } catch (PDOException $e) {
     die("Erreur de base de données : " . $e->getMessage());
@@ -64,7 +64,7 @@ require_once '../includes/header.php';
             <h1 class="text-4xl md:text-5xl font-black tracking-tight uppercase leading-none bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-400 mb-2">Détail de l'avis #<?= e($response['id']) ?></h1>
             <p class="text-white/60 font-body-lg">Reçu le <?= e(date('d/m/Y à H:i', strtotime($response['created_at']))) ?></p>
         </div>
-        <a href="/soutarah/admin/responses.php" class="mt-4 md:mt-0 bg-white/5 text-white/70 border border-white/10 px-6 py-3 rounded-xl font-bold hover:bg-white/20 hover:text-white transition-colors flex items-center gap-2 backdrop-blur-md">
+        <a href="/admin/responses.php" class="mt-4 md:mt-0 bg-white/5 text-white/70 border border-white/10 px-6 py-3 rounded-xl font-bold hover:bg-white/20 hover:text-white transition-colors flex items-center gap-2 backdrop-blur-md">
             <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">arrow_back</span>
             Retour à la liste
         </a>
@@ -230,3 +230,4 @@ require_once '../includes/header.php';
 </main>
 
 <?php require_once '../includes/footer.php'; ?>
+

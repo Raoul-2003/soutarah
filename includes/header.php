@@ -163,18 +163,18 @@ $bodyClass = $bodyClass ?? 'bg-surface text-on-surface font-body-md antialiased 
     <header class="fixed top-0 w-full z-50 bg-[#09120e]/80 backdrop-blur-2xl border-b border-white/10 shadow-lg">
         <div class="flex items-center justify-between px-margin-mobile h-16 w-full max-w-container-max mx-auto">
             <div class="flex items-center gap-4">
-                <a href="/soutarah/admin/dashboard.php" class="font-headline-md text-headline-md text-white font-bold tracking-tight flex items-center gap-2 group">
+                <a href="/admin/dashboard.php" class="font-headline-md text-headline-md text-white font-bold tracking-tight flex items-center gap-2 group">
                     <span class="material-symbols-outlined text-[#39ff14] group-hover:drop-shadow-[0_0_10px_rgba(57,255,20,0.8)] transition-all" style="font-variation-settings: 'FILL' 1;">directions_car</span>
                     SOUTARAH
                 </a>
             </div>
             <nav class="hidden md:flex gap-4">
-                <a href="/soutarah/admin/dashboard.php" class="text-white/60 hover:text-white transition-colors font-label-md py-2 px-3 rounded-lg hover:bg-white/10 flex items-center gap-2">Dashboard</a>
-                <a href="/soutarah/admin/vehicles.php" class="text-white/60 hover:text-white transition-colors font-label-md py-2 px-3 rounded-lg hover:bg-white/10 flex items-center gap-2">Véhicules</a>
-                <a href="/soutarah/admin/responses.php" class="text-white/60 hover:text-white transition-colors font-label-md py-2 px-3 rounded-lg hover:bg-white/10 flex items-center gap-2">Réponses</a>
+                <a href="/admin/dashboard.php" class="text-white/60 hover:text-white transition-colors font-label-md py-2 px-3 rounded-lg hover:bg-white/10 flex items-center gap-2">Dashboard</a>
+                <a href="/admin/vehicles.php" class="text-white/60 hover:text-white transition-colors font-label-md py-2 px-3 rounded-lg hover:bg-white/10 flex items-center gap-2">Véhicules</a>
+                <a href="/admin/responses.php" class="text-white/60 hover:text-white transition-colors font-label-md py-2 px-3 rounded-lg hover:bg-white/10 flex items-center gap-2">Réponses</a>
             </nav>
             <div class="flex items-center gap-4">
-                <a href="/soutarah/admin/logout.php" class="text-white/50 hover:text-red-400 transition-colors flex items-center gap-1 font-label-md py-2 px-3 rounded-lg hover:bg-red-500/10 border border-transparent hover:border-red-500/20">
+                <a href="/admin/logout.php" class="text-white/50 hover:text-red-400 transition-colors flex items-center gap-1 font-label-md py-2 px-3 rounded-lg hover:bg-red-500/10 border border-transparent hover:border-red-500/20">
                     <span class="material-symbols-outlined text-[20px]">logout</span>
                     <span class="hidden sm:inline">Déconnexion</span>
                 </a>
@@ -201,3 +201,4 @@ $bodyClass = $bodyClass ?? 'bg-surface text-on-surface font-body-md antialiased 
     </div>
     <?php unset($_SESSION['flash']); ?>
 <?php endif; ?>
+

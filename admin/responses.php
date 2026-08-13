@@ -170,7 +170,7 @@ require_once '../includes/header.php';
             </div>
             <div class="flex gap-2">
                 <button type="submit" class="bg-white/10 text-white px-6 py-3 rounded-xl font-bold hover:bg-white/20 hover:text-[#39ff14] transition-colors border border-white/10 hover:border-[#39ff14]/50">Filtrer</button>
-                <a href="/soutarah/admin/responses.php" class="bg-transparent text-white/50 border border-white/10 px-4 py-3 rounded-xl font-label-md hover:bg-white/5 hover:text-white transition-colors flex items-center justify-center">Reset</a>
+                <a href="/admin/responses.php" class="bg-transparent text-white/50 border border-white/10 px-4 py-3 rounded-xl font-label-md hover:bg-white/5 hover:text-white transition-colors flex items-center justify-center">Reset</a>
             </div>
         </form>
     </div>
@@ -212,7 +212,7 @@ require_once '../includes/header.php';
                                     <span class="font-bold inline-block border px-3 py-1 rounded-lg <?= $color ?>"><?= e($r) ?>/5</span>
                                 </td>
                                 <td class="p-5 text-right">
-                                    <a href="/soutarah/admin/response-view.php?id=<?= e($response['id']) ?>" class="inline-flex items-center justify-center w-10 h-10 rounded-xl bg-white/5 text-white/70 hover:bg-white/20 hover:text-white transition-colors border border-white/10 group-hover:border-[#39ff14]/50 group-hover:text-[#39ff14]">
+                                    <a href="/admin/response-view.php?id=<?= e($response['id']) ?>" class="inline-flex items-center justify-center w-10 h-10 rounded-xl bg-white/5 text-white/70 hover:bg-white/20 hover:text-white transition-colors border border-white/10 group-hover:border-[#39ff14]/50 group-hover:text-[#39ff14]">
                                         <span class="material-symbols-outlined text-[18px]">visibility</span>
                                     </a>
                                 </td>
@@ -237,3 +237,4 @@ require_once '../includes/header.php';
 </main>
 
 <?php require_once '../includes/footer.php'; ?>
+

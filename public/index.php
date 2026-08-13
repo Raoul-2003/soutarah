@@ -64,7 +64,7 @@ require_once '../includes/header.php';
                 <div class="w-32 h-32 border border-white/20 rounded-full absolute"></div>
             </div>
             
-            <img src="/soutarah/public/assets/img/car.png" alt="Voiture de luxe" class="w-full h-auto object-contain relative z-10 drop-shadow-[0_30px_30px_rgba(0,0,0,0.7)] car-animation">
+            <img src="/public/assets/img/car.png" alt="Voiture de luxe" class="w-full h-auto object-contain relative z-10 drop-shadow-[0_30px_30px_rgba(0,0,0,0.7)] car-animation">
         </div>
         
         <h1 class="text-4xl md:text-5xl font-black tracking-tight mb-4 uppercase leading-none bg-clip-text text-transparent bg-gradient-to-b from-white to-gray-300 text-left w-full" style="font-family: 'Inter', sans-serif;">
@@ -75,7 +75,7 @@ require_once '../includes/header.php';
             Gérez votre flotte de véhicules et consultez les avis de satisfaction de vos clients.
         </p>
         
-        <a href="/soutarah/admin/login.php" class="inline-flex items-center justify-between w-full bg-white/5 hover:bg-white/10 border border-white/10 backdrop-blur-xl text-white px-6 py-4 rounded-[2rem] transition-all group">
+        <a href="/admin/login.php" class="inline-flex items-center justify-between w-full bg-white/5 hover:bg-white/10 border border-white/10 backdrop-blur-xl text-white px-6 py-4 rounded-[2rem] transition-all group">
             <span class="font-medium">Connexion</span>
             <div class="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center">
                 <span class="material-symbols-outlined text-white transform group-hover:translate-x-1 transition-transform text-sm">arrow_forward_ios</span>
@@ -90,3 +90,4 @@ $hideFooter = true;
 // We still include it if it has JS, but hide visuals
 require_once '../includes/footer.php'; 
 ?>
+

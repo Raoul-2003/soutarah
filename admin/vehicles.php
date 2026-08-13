@@ -84,11 +84,11 @@ require_once '../includes/header.php';
             <p class="text-white/60 font-body-lg">Gérez, suivez et analysez votre flotte de location.</p>
         </div>
         <div class="flex items-center gap-3 mt-4 md:mt-0">
-            <a href="/soutarah/admin/print-all-qr.php" target="_blank" class="bg-white/5 text-white border border-white/20 hover:bg-white/10 px-4 py-2 rounded-xl font-label-md transition-colors flex items-center gap-2 backdrop-blur-md">
+            <a href="/admin/print-all-qr.php" target="_blank" class="bg-white/5 text-white border border-white/20 hover:bg-white/10 px-4 py-2 rounded-xl font-label-md transition-colors flex items-center gap-2 backdrop-blur-md">
                 <span class="material-symbols-outlined text-[#39ff14]" style="font-variation-settings: 'FILL' 0;">qr_code_2</span>
                 Imprimer tous les QR
             </a>
-            <a href="/soutarah/admin/vehicle-create.php" class="bg-white text-black px-4 py-2 rounded-xl font-bold hover:bg-gray-200 transition-colors flex items-center gap-2 shadow-[0_0_15px_rgba(255,255,255,0.3)]">
+            <a href="/admin/vehicle-create.php" class="bg-white text-black px-4 py-2 rounded-xl font-bold hover:bg-gray-200 transition-colors flex items-center gap-2 shadow-[0_0_15px_rgba(255,255,255,0.3)]">
                 <span class="material-symbols-outlined">add</span>
                 Ajouter un véhicule
             </a>
@@ -129,7 +129,7 @@ require_once '../includes/header.php';
             
             <div class="flex gap-2">
                 <button type="submit" class="bg-white/10 text-white px-6 py-3 rounded-xl font-bold hover:bg-white/20 hover:text-[#39ff14] transition-colors border border-white/10 hover:border-[#39ff14]/50">Filtrer</button>
-                <a href="/soutarah/admin/vehicles.php" class="bg-transparent text-white/50 border border-white/10 px-4 py-3 rounded-xl font-label-md hover:bg-white/5 hover:text-white transition-colors flex items-center justify-center">Réinitialiser</a>
+                <a href="/admin/vehicles.php" class="bg-transparent text-white/50 border border-white/10 px-4 py-3 rounded-xl font-label-md hover:bg-white/5 hover:text-white transition-colors flex items-center justify-center">Réinitialiser</a>
             </div>
         </form>
     </div>
@@ -185,9 +185,9 @@ require_once '../includes/header.php';
                                     <?php if (file_exists('../qrcodes/' . $vehicle['code'] . '.png')): ?>
                                         <div class="flex items-center justify-center gap-3">
                                             <div class="p-1 border border-white/20 rounded-lg bg-white">
-                                                <img src="/soutarah/qrcodes/<?= e($vehicle['code']) ?>.png" class="w-8 h-8 object-contain" alt="QR">
+                                                <img src="/qrcodes/<?= e($vehicle['code']) ?>.png" class="w-8 h-8 object-contain" alt="QR">
                                             </div>
-                                            <a href="/soutarah/admin/print-qr.php?code=<?= e($vehicle['code']) ?>" target="_blank" class="text-white/50 hover:text-[#39ff14] transition-colors" title="Imprimer">
+                                            <a href="/admin/print-qr.php?code=<?= e($vehicle['code']) ?>" target="_blank" class="text-white/50 hover:text-[#39ff14] transition-colors" title="Imprimer">
                                                 <span class="material-symbols-outlined text-[20px]">print</span>
                                             </a>
                                         </div>
@@ -205,10 +205,10 @@ require_once '../includes/header.php';
                                 </td>
                                 <td class="p-5 text-right">
                                     <div class="flex justify-end gap-2">
-                                        <a href="/soutarah/admin/vehicle-edit.php?id=<?= e($vehicle['id']) ?>" class="inline-flex items-center justify-center w-10 h-10 rounded-xl bg-white/5 text-white/70 hover:bg-white/20 hover:text-white transition-colors border border-white/10">
+                                        <a href="/admin/vehicle-edit.php?id=<?= e($vehicle['id']) ?>" class="inline-flex items-center justify-center w-10 h-10 rounded-xl bg-white/5 text-white/70 hover:bg-white/20 hover:text-white transition-colors border border-white/10">
                                             <span class="material-symbols-outlined text-[18px]">edit</span>
                                         </a>
-                                        <form action="/soutarah/admin/vehicle-delete.php" method="POST" style="display: inline;" onsubmit="return confirm('Êtes-vous sûr de vouloir supprimer ce véhicule ?');">
+                                        <form action="/admin/vehicle-delete.php" method="POST" style="display: inline;" onsubmit="return confirm('Êtes-vous sûr de vouloir supprimer ce véhicule ?');">
                                             <input type="hidden" name="csrf_token" value="<?= e(csrfToken()) ?>">
                                             <input type="hidden" name="id" value="<?= e($vehicle['id']) ?>">
                                             <button type="submit" class="inline-flex items-center justify-center w-10 h-10 rounded-xl bg-red-500/10 text-red-400 hover:bg-red-500 hover:text-white transition-colors border border-red-500/20">
@@ -238,3 +238,4 @@ require_once '../includes/header.php';
 </main>
 
 <?php require_once '../includes/footer.php'; ?>
+

@@ -10,7 +10,7 @@ if (isPost()) {
     $token = $_POST['csrf_token'] ?? '';
     if (!verifyCsrfToken($token)) {
         flash('error', 'Erreur de sécurité CSRF.', 'error');
-        redirect('/soutarah/admin/vehicles.php');
+        redirect('/admin/vehicles.php');
     }
 
     $id = $_POST['id'] ?? null;
@@ -27,4 +27,5 @@ if (isPost()) {
     }
 }
 
-redirect('/soutarah/admin/vehicles.php');
+redirect('/admin/vehicles.php');
+

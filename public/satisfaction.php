@@ -25,7 +25,7 @@ require_once '../includes/header.php';
 <style>
     .bg-satisfaction-car {
         background-color: #0b1711;
-        background-image: url('/soutarah/public/assets/img/car.png');
+        background-image: url('/public/assets/img/car.png');
         background-size: cover;
         background-position: center;
         background-attachment: fixed;
@@ -69,7 +69,7 @@ require_once '../includes/header.php';
         </div>
     </div>
 
-    <form action="/soutarah/public/submit.php" method="POST" id="satisfactionForm" class="space-y-6">
+    <form action="/public/submit.php" method="POST" id="satisfactionForm" class="space-y-6">
         <input type="hidden" name="csrf_token" value="<?= e(csrfToken()) ?>">
         <input type="hidden" name="vehicle_code" value="<?= e($vehicle['code']) ?>">
 
@@ -389,3 +389,4 @@ require_once '../includes/header.php';
 </script>
 
 <?php require_once '../includes/footer.php'; ?>
+

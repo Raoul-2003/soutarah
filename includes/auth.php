@@ -14,7 +14,7 @@ function isAdminLoggedIn() {
  */
 function requireAdmin() {
     if (!isAdminLoggedIn()) {
-        redirect('/soutarah/admin/login.php');
+        redirect('/admin/login.php');
     }
 }
 
@@ -43,3 +43,4 @@ function logoutAdmin() {
     session_unset();
     session_destroy();
 }
+

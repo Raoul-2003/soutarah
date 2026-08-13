@@ -44,3 +44,4 @@ function printQR(imageUrl, code) {
     `);
     printWindow.document.close();
 }
+

@@ -16,3 +16,4 @@ try {
     // In production, we should log the error and not display it to the user.
     die('Erreur de connexion à la base de données. Veuillez contacter l\'administrateur.');
 }
+

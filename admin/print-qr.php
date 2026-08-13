@@ -120,14 +120,14 @@ if (!file_exists($qrPath)) {
     </div>
 
     <div class="print-card">
-        <img src="/soutarah/assets/images/logo.png" class="logo" alt="SOUTARAH">
+        <img src="/assets/images/logo.png" class="logo" alt="SOUTARAH">
         
         <div class="vehicle-info">
             <h2><?= e($vehicle['brand']) ?> <?= e($vehicle['model']) ?></h2>
             <p>Code : <?= e($vehicle['code']) ?></p>
         </div>
 
-        <img src="/soutarah/qrcodes/<?= e($code) ?>.png" class="qr-code" alt="QR Code">
+        <img src="/qrcodes/<?= e($code) ?>.png" class="qr-code" alt="QR Code">
         
         <div class="footer-text">
             Scannez pour évaluer<br>
@@ -141,3 +141,4 @@ if (!file_exists($qrPath)) {
     </script>
 </body>
 </html>
+

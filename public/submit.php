@@ -5,7 +5,7 @@ require_once '../includes/functions.php';
 require_once '../includes/auth.php';
 
 if (!isPost()) {
-    redirect('/soutarah/public/index.php');
+    redirect('/public/index.php');
 }
 
 $token = $_POST['csrf_token'] ?? '';
@@ -32,7 +32,7 @@ $overallRating = (int)($_POST['overall_rating'] ?? 0);
 // Vérification des champs requis avec astérisque
 if (!$email || !$withDriver || !$overallRating) {
     flash('error', 'Veuillez remplir tous les champs obligatoires (*).', 'error');
-    redirect('/soutarah/public/satisfaction.php?vehicle=' . urlencode($vehicleCode));
+    redirect('/public/satisfaction.php?vehicle=' . urlencode($vehicleCode));
 }
 
 // Récupération des autres champs (facultatifs selon Google Forms)
@@ -82,9 +82,10 @@ try {
         $overallRating, $comment
     ]);
 
-    redirect('/soutarah/public/thank-you.php');
+    redirect('/public/thank-you.php');
 } catch (PDOException $e) {
     error_log("Erreur d'insertion : " . $e->getMessage());
     flash('error', 'Une erreur est survenue lors de l\'enregistrement. Veuillez réessayer.', 'error');
-    redirect('/soutarah/public/satisfaction.php?vehicle=' . urlencode($vehicleCode));
+    redirect('/public/satisfaction.php?vehicle=' . urlencode($vehicleCode));
 }
+
