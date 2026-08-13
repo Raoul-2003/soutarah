@@ -58,7 +58,7 @@ require_once '../includes/header.php';
                 <div class="w-32 h-32 border border-white/20 rounded-full absolute"></div>
             </div>
             
-            <img src="/public/assets/img/car.png" alt="Voiture de luxe" class="w-full h-auto object-contain relative z-10 drop-shadow-[0_30px_30px_rgba(0,0,0,0.7)] car-animation">
+            <img src="assets/img/car.png" alt="Voiture de luxe" class="w-full h-auto object-contain relative z-10 drop-shadow-[0_30px_30px_rgba(0,0,0,0.7)] car-animation">
         </div>
         
         <h1 class="text-4xl md:text-5xl font-black tracking-tight mb-4 uppercase leading-none bg-clip-text text-transparent bg-gradient-to-b from-white to-gray-300 text-left w-full" style="font-family: 'Inter', sans-serif;">

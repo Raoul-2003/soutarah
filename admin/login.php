@@ -16,7 +16,7 @@ require_once '../includes/header.php';
 <style>
     .bg-luxury-car {
         background-color: #0B2117;
-        background-image: url('/public/assets/img/car.png');
+        background-image: url('../public/assets/img/car.png');
         background-size: cover;
         background-position: center;
         background-attachment: fixed;
@@ -36,7 +36,7 @@ require_once '../includes/header.php';
         <header class="text-center flex flex-col gap-stack-xs items-center">
             <!-- Logo Image -->
             <div class="w-32 h-32 mb-2 flex items-center justify-center">
-                <img src="/assets/images/logo.png" alt="SOUTARAH Logo" class="w-full h-full object-contain drop-shadow-md">
+                <img src="../assets/images/logo.png" alt="SOUTARAH Logo" class="w-full h-full object-contain drop-shadow-md">
             </div>
             <h1 class="font-headline-lg text-headline-lg md:font-display-lg-mobile md:text-display-lg-mobile text-white tracking-tight">
                 SOUTARAH

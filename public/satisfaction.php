@@ -25,7 +25,7 @@ require_once '../includes/header.php';
 <style>
     .bg-satisfaction-car {
         background-color: #0b1711;
-        background-image: url('/public/assets/img/car.png');
+        background-image: url('assets/img/car.png');
         background-size: cover;
         background-position: center;
         background-attachment: fixed;
