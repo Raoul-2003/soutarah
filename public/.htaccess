@@ -1,0 +1,7 @@
+# public/.htaccess
+Options -Indexes
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    # Optionnel : réécritures si nécessaires plus tard
+</IfModule>
