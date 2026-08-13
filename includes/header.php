@@ -8,7 +8,7 @@ $bodyClass = $bodyClass ?? 'bg-surface text-on-surface font-body-md antialiased 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title><?= $pageTitle ?? 'SOUTARAH GROUP' ?></title>
-    
+    <link rel="icon" type="image/png" href="../assets/images/logo.png">
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
     
