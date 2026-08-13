@@ -42,13 +42,7 @@ require_once '../includes/header.php';
     
     <div class="z-10 text-center px-6 py-12 max-w-lg mx-auto w-full flex flex-col items-center">
         
-        <!-- Header / Logo Area -->
-        <div class="w-full flex justify-between items-center mb-8">
-            <div class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center backdrop-blur-md border border-white/10">
-                <span class="material-symbols-outlined text-white text-sm">arrow_back_ios_new</span>
-            </div>
-            <span class="text-white font-medium text-sm">Passer</span>
-        </div>
+
 
         <!-- Floating spheres (decoration) like in reference -->
         <div class="absolute top-[25%] left-[10%] w-16 h-16 rounded-full bg-gradient-to-br from-[#64ffda] to-[#00bfa5] shadow-[0_0_30px_rgba(0,191,165,0.4)] float-1"></div>
